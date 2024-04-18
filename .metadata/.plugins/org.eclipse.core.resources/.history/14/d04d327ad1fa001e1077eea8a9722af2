@@ -1,0 +1,10 @@
+package el_bosque_verde;
+
+public class Especie {
+	
+	private String nombre;
+	private String tipo;
+	private int cantidad;
+	private Habitat habitat;
+
+}

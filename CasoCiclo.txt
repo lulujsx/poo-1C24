@@ -1,0 +1,57 @@
+//Java orientado a objetos, Programa que suma  a y b 
+//usando Orientación a Objetos, setters, getters, uso Scanner,  Uso de Ciclo
+import java.util.Scanner;
+public class SumaOOCiclo 
+{
+  private 
+    int a;
+    int b;
+  public
+    void seta(int a1)
+    {
+        this.a=a1;
+    }
+    void setb(int b1)
+    {
+        this.b=b1;
+    }
+    int geta()
+    {
+      return this.a;
+    }
+    int getb()
+    {
+       return this.b;
+    }
+
+    int FunSuma(int fa, int fb)
+    {
+        int sum;
+        sum=fa+fb;
+        return sum;
+    }
+    
+    public static void main(String[] args) 
+	{
+		int a;
+	    int b;
+	    int marca;
+	    SumaOOCiclo yosumo= new SumaOOCiclo();
+	    Scanner teclado = new Scanner(System.in);
+	    do
+	    {
+	        System.out.print("Ingrese valor de a: ");
+	        a = teclado.nextInt();
+	        System.out.print("Ingrese valor de b: ");
+	        b = teclado.nextInt();
+	        yosumo.seta(a);
+	        yosumo.setb(b);
+	        System.out.println("La suma de a: "+yosumo.geta()+" y b: "+yosumo.getb()+" es igual a: "+yosumo.FunSuma(a,b));
+	        System.out.println("Si quiere continuar tipee 1, sino para terminar tipee 0:   ");
+	        marca = teclado.nextInt();
+	        //system("cls");
+	    }
+	    while(marca==1);
+	    System.out.println("Fin del Programa");
+   	}
+}

@@ -1,0 +1,18 @@
+package el_bosque_verde;
+
+public class ReservaNatural {
+	
+	private Especie especiex;
+	
+	ReservaNatural(){
+		
+	}
+	
+	void agregarEspecie(Especie esp) {
+	}
+	
+	String buscarEspecie() {
+		
+	}
+	
+}

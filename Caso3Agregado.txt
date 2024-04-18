@@ -1,0 +1,27 @@
+//Caso31
+public class SumaOO 
+{
+	
+	   int a=5;
+	   int b=10;	
+	   int FunSuma()
+	   {
+		   System.out.println("Imprimo this: " +this); 
+		   System.out.println( "Valor entero del hashCode de this: " + this.hashCode());
+		   System.out.println("Valor Hexadecimal del hashCode de this: " + Integer.toHexString(this.hashCode()));  
+		   return this.a + this.b;		
+	   }	
+
+	public static void main(String[] args) 
+	{
+		SumaOO sumador=new SumaOO();		
+		System.out.println("Imprimo sumador: " +sumador); 
+		System.out.println( "Valor entero del hashCode del Objeto sumador: " + sumador.hashCode());
+	    System.out.println("Valor Hexadecimal del hashCode del Objeto sumador: " + Integer.toHexString(sumador.hashCode()));  
+		int suma=0;		
+		suma=sumador.FunSuma();
+		System.out.println("La suma de a y b es: "+ suma);		
+
+	}
+
+}

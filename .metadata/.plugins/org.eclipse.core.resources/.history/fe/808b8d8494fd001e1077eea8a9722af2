@@ -1,0 +1,46 @@
+package el_bosque_verde;
+
+public class ReservaNatural {
+	
+	private Especie especies[] = new Especie[0];
+	private Cuidador[] cuidadorxs;
+	private Habitat[] habitats;
+	
+	ReservaNatural(){
+		
+	}
+	
+	
+	void agregarEspecie(Especie esp) {
+		Integer position = this.especies.length;
+        this.especies[position]=esp;			
+	}
+	
+	Integer buscarEspecie(String nombre) {
+		Integer contador = 0;
+		for(int i=0;i<this.especies.length;i++) {
+			if(this.especies[i].getNombre() == nombre) {
+				contador++;
+			}
+		}
+		return contador;
+	}
+	
+//	double calcularPromedio() {
+//		
+//	}
+//	
+//	double calcularSueldoTotal(){
+//		
+//	}
+	
+	public static void main(String[] args) {
+		Especie especie1 = new Especie("gato","michi",1);
+		Habitat habitatMichi = new Habitat("moron",3.14,especie1);
+		ReservaNatural reserva1 = new ReservaNatural();
+		reserva1.agregarEspecie(especie1);
+		Integer resultado = reserva1.buscarEspecie("gato");
+		System.out.println(resultado);
+	}
+	
+}

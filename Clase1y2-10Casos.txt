@@ -1,0 +1,497 @@
+//Caso 1
+//Java no orientado a objetos sin usar funciones o métodos
+
+public class SumaNoOO
+{	
+  public static void main(String[] args) 
+  {
+	int a=5;
+	int b=10;
+	int suma=0;
+	suma=a+b;		
+	System.out.println("La suma de a y b es: "+ suma);
+  }
+}
+//Fin caso 1
+
+//Caso 2
+//Java no orientado a objetos usando funciones o métodos
+
+public class SumaFunNoOO
+{	
+  static int FunSuma(int fa,int fb)
+{
+	return fa+fb;
+}
+	public static void main(String[] args) 
+	{
+		int a=5;
+		int b=10;
+		int suma=0;		
+		suma=FunSuma(a,b);
+		System.out.println("La suma de a y b es: "+ suma);
+	}
+}
+//Fin caso 2
+
+//Caso 3
+//Java orientado a objetos 
+public class SumaOO
+{  
+   int a=5;
+   int b=10;	
+   int FunSuma()
+   {
+	return this.a + this.b;
+   }
+	public static void main(String[] args) 
+	{
+		SumaOO sumador=new SumaOO();
+		int suma=0;		
+		suma=sumador.FunSuma(); //Mensaje para el Objeto sumador para que haga la suma
+		System.out.println("La suma de a y b es: "+ suma);
+	}
+}
+//Fin Caso 3
+
+//Caso 4
+//Java orientado a objetos, acceso a los atributos en main 
+public class SumaOOacc 
+{
+private
+   int a=5;   //atributo
+   int b=10;  //atributo	
+ public  
+   int FunSuma()        // Método de la clase
+   {
+     return this.a + this.b;
+   }
+
+   public static void main(String[] args)  //Método main
+   {
+	  SumaOOacc sumador=new SumaOOacc(); //Creación del Objeto sumador
+	  int suma=0;		
+	  suma=sumador.FunSuma(); //Mensaje para el Objeto sumador para que haga la suma
+	  System.out.println("La suma de a y b es: "+ suma);
+	  System.out.println("Valor de a: " + sumador.a);
+	  System.out.println("Valor de b: " + sumador.b);
+	  sumador.a=20;
+	  sumador.b=30;
+	  suma=sumador.FunSuma();
+	  System.out.println("La suma de a y b es: "+ suma);
+	  System.out.println("Valor de a: " + sumador.a);
+	  System.out.println("Valor de b: " + sumador.b);	  
+   }
+}
+
+//Fin Caso 4
+
+//Caso 5
+//Java orientado a objetos, settters y getters
+public class SumaOOsg 
+{
+  private
+	int a;
+    int b;
+
+  public
+    void seta(int a1)
+    {
+        this.a=a1;
+    }
+    void setb(int b1)
+    {
+        this.b=b1;
+    }
+    int geta()
+    {
+      return this.a;
+    }
+    int getb()
+    {
+       return this.b;
+    }
+
+    int FunSuma(int fa, int fb)
+    {
+        int sum;
+        sum=fa+fb;
+        return sum;
+    }
+
+	public static void main(String[] args) 
+	{
+	    SumaOOsg sumador=new SumaOOsg();
+	    sumador.seta(5);
+	    sumador.setb(10);
+	    int a=sumador.geta();
+	    int b=sumador.getb();
+	    int suma=sumador.FunSuma(a,b);
+	    System.out.println("La suma de a y b es: " +suma);
+	    System.out.println("La suma de a y b es: " + sumador.FunSuma(sumador.geta(), sumador.getb()));	    
+	}
+}
+//Fin Caso 5
+
+//Caso 6
+//Java orientado a objetos, settters y getters y uso Scanner
+import java.util.Scanner;
+public class SumaOOscan 
+{
+  private
+	int a;
+    int b;
+
+  public
+    void seta(int a1)
+    {
+        this.a=a1;
+    }
+    void setb(int b1)
+    {
+        this.b=b1;
+    }
+    int geta()
+    {
+      return this.a;
+    }
+    int getb()
+    {
+       return this.b;
+    }
+
+    int FunSuma(int fa, int fb)
+    {
+        int sum;
+        sum=fa+fb;
+        return sum;
+    }
+
+	public static void main(String[] args) 
+	{
+	    SumaOOscan sumador=new SumaOOscan();
+            // instanciando un objeto Scanner
+	    Scanner teclado = new Scanner(System.in);
+	   // números enteros
+	    System.out.print("\nIngrese un numero a: \n");
+	    int a = teclado.nextInt();
+	    System.out.println("  >> Numero ingresado a: " + a);
+
+            System.out.print("\nIngrese un numero b: \n");
+            int b = teclado.nextInt();	    
+	    System.out.println("  >> Numero ingresado b: " + b);
+
+	    sumador.seta(a);
+	    sumador.setb(b);
+	    int a=sumador.geta();
+	    int b=sumador.getb();
+	    int suma=sumador.FunSuma(a,b);
+	    System.out.println("La suma de a y b es: " +suma);
+	    System.out.println("La suma de a y b es: " + sumador.FunSuma(sumador.geta(), sumador.getb()));
+            teclado.close();	    
+	}
+}
+//Fin Caso 6
+
+//Caso 7
+//Java orientado a objetos, settters y getters y uso Scanner y Constructor.
+import java.util.Scanner;
+public class SumaOOConstructor
+{
+  private
+    int a;
+    int b;
+
+  public
+  SumaOOConstructor() //Constructor default
+  {this(123,555)  }
+  SumaOOConstructor(int a1, int b1) //Constructor sobrecargado
+  {
+    this.a=a1;
+    this.b=b1;
+  }  
+   /** void seta(int a1) // No usaremos los setter
+    {
+        this.a=a1;
+    }
+    void setb(int b1)
+    {
+        this.b=b1;
+    }
+   */
+    int geta()
+    {
+      return this.a;
+    }
+    int getb()
+    {
+       return this.b;
+    }
+
+    int FunSuma(int fa, int fb)
+    {
+        int sum;
+        sum=fa+fb;
+        return sum;
+    }
+
+	public static void main(String[] args) 
+	{	    
+            // instanciando un objeto Scanner
+	    Scanner teclado = new Scanner(System.in);
+	   // Para números enteros
+	    System.out.print("\nIngrese un numero a: \n");
+	    int a = teclado.nextInt();
+	    System.out.println("  >> Numero ingresado a: " + a);
+
+            System.out.print("\nIngrese un numero b: \n");
+            int b = teclado.nextInt();	    
+	    System.out.println("  >> Numero ingresado b: " + b);
+            SumaOOConstructor sumador=new SumaOOscan(5,10); //Uso Constructor Sobrecargado
+	    //sumador.seta(a);//En este caso no lo necesitamos
+	    //sumador.setb(b);//En este caso no lo necesitamos
+	    a=sumador.geta();
+	    b=sumador.getb();
+	    int suma=sumador.FunSuma(a,b);
+	    System.out.println("La suma de a y b es: " +suma);
+	    System.out.println("La suma de a y b es: " + sumador.FunSuma(sumador.geta(), sumador.getb()));
+            teclado.close();	    
+	}
+}
+//Fin Caso 7
+
+//Caso 8
+//Java orientado a objetos, settters y getters y uso Scanner y Constructor default.
+import java.util.Scanner;
+public class SumaOOConstructorD
+{
+  private
+    int a;
+    int b;
+
+  public
+  SumaOOConstructorD() //Constructor default
+  {
+   // this.a=5;
+   // this.b=10;
+	
+      // instanciando un objeto Scanner para leer desde teclado, en este caso números enteros
+     Scanner teclado = new Scanner(System.in); 
+     System.out.print("\nIngrese un numero a: \n");
+     this.a = teclado.nextInt();
+     System.out.println("  >> Numero ingresado a: " + this.a);
+     System.out.print("\nIngrese un numero b: \n");
+     this.b = teclado.nextInt();	    
+     System.out.println("  >> Numero ingresado b: " + this.b);
+     teclado.close();    
+  }
+  SumaOOConstructorD(int a1, int b1) //Constructor sobrecargado que no usamos en este caso
+  {
+    this.a=a1;
+    this.b=b1;
+  }  
+    void seta(int a1) 
+    {
+        this.a=a1;
+    }
+    void setb(int b1)
+    {
+        this.b=b1;
+    }
+   
+    int geta()
+    {
+      return this.a;
+    }
+    int getb()
+    {
+       return this.b;
+    }
+
+    int FunSuma(int fa, int fb)
+    {
+        int sum;
+        sum=fa+fb;
+        return sum;
+    }
+
+	public static void main(String[] args) 
+	{		
+      SumaOOConstructorD sumador=new SumaOOConstructorD();    
+      int  a=sumador.geta();
+      int  b=sumador.getb();
+      int suma=sumador.FunSuma(a,b);
+      System.out.println("La suma de a y b es: " +suma);
+      System.out.println("La suma de a y b es: " + sumador.FunSuma(sumador.geta(), sumador.getb()));      
+	}
+}
+//Fin Caso 8
+
+//Caso 9
+//Java orientado a objetos, settters y getters y uso Scanner y Constructor default y Sobrecargado
+import java.util.Scanner;
+public class SumaOOConstructorD1
+{
+  private
+    int a;
+    int b;
+
+  public
+  SumaOOConstructorD1() //Constructor default
+  {
+    this.a=5;
+    this.b=10;
+    
+  }
+  SumaOOConstructorD1(int a1, int b1) //Constructor sobrecargado
+  {
+    this.a=a1;
+    this.b=b1;
+  }  
+    void seta(int a1) // No usaremos los setter
+    {
+        this.a=a1;
+    }
+    void setb(int b1)
+    {
+        this.b=b1;
+    }
+   
+    int geta()
+    {
+      return this.a;
+    }
+    int getb()
+    {
+       return this.b;
+    }
+
+    int FunSuma(int fa, int fb)
+    {
+        int sum;
+        sum=fa+fb;
+        return sum;
+    }
+
+	public static void main(String[] args) 
+	{	    
+            // instanciando un objeto Scanner
+	    Scanner teclado = new Scanner(System.in);
+	   // Para números enteros
+	    System.out.print("\nIngrese un numero a: \n");
+	    int a = teclado.nextInt();
+	    System.out.println("  >> Numero ingresado a: " + a);
+            System.out.print("\nIngrese un numero b: \n");
+            int b = teclado.nextInt();	    
+	    System.out.println("  >> Numero ingresado b: " + b);
+            SumaOOConstructorD1 sumador=new SumaOOConstructorD1(a,b);
+	    //sumador.seta(a);
+	    //sumador.setb(b);
+	    a=sumador.geta();
+	    b=sumador.getb();
+	    int suma=sumador.FunSuma(a,b);
+	    System.out.println("La suma de a y b es: " +suma);
+	    System.out.println("La suma de a y b es: " + sumador.FunSuma(sumador.geta(), sumador.getb()));
+            teclado.close();	    
+	}
+}
+//Fin Caso 9
+
+//Caso 10
+//Ejemplos Scanner
+import java.util.Scanner;
+
+public class EjemplosScanner {
+
+	public static void main(String[] args) {
+		
+		// instanciando un objeto Scanner
+		Scanner teclado = new Scanner(System.in);
+
+		// números enteros
+		System.out.print("\nIngrese un numero: \n");
+		int nro = teclado.nextInt();
+		System.out.println("  >> Numero ingresado: " + nro);
+		
+		// eliminando el terminador de linea "abandonado"
+		teclado.nextLine();
+		
+		// frase hasta el terminador de linea
+		System.out.print("\nIngrese una frase: \n");
+		String frase = teclado.nextLine();
+		System.out.println("  >> La frase ingresada es: " + frase);
+		
+		// frase hasta el terminador de linea, palabra a palabra
+		System.out.print("\nIngrese otra frase: \n");
+		String otraFrase = teclado.nextLine();
+		System.out.println("  >> La frase ingresada es: " + otraFrase);
+		for (String palabra : otraFrase.split(" ")) {
+			System.out.println("    >> " + palabra);
+		}
+		
+		// un caracter
+		System.out.print("\nIngrese un caracter: \n");
+		char caracter = teclado.next().charAt(0);
+		System.out.println("  >> El caracter ingresado es: " + caracter);
+		
+		// eliminando el terminador de linea "abandonado"
+		teclado.nextLine();
+		
+		// de a una palabra
+		System.out.print("\nIngrese dos palabras: \n");
+		String primeraPalabra = teclado.next();
+		System.out.println("  >> Primera palabra ingresada: " + primeraPalabra);
+		String segundaPalabra = teclado.next();
+		System.out.println("  >> Segunda palabra ingresada: " + segundaPalabra);
+		
+		// eliminando el terminador de linea "abandonado"
+		teclado.nextLine();
+		
+		// frases ilimitadas, enter para terminar
+		String fraseN;
+		System.out.print("\nIngrese varias frases (doble enter para terminar): \n");
+		while (teclado.hasNextLine()) {
+			fraseN = teclado.nextLine();
+			
+			if (!fraseN.isEmpty()) {
+				System.out.println("  >> " + fraseN);
+			} else {
+				break;
+			}
+		}
+		System.out.println("Ya no se ingresan mas frases");
+		
+		// validando el ingreso de un numero positivo
+		int positivo;
+		do {
+			System.out.println("\nIngrese un numero entero positivo: ");
+			while (!teclado.hasNextInt()) {
+				System.out.println("Ese no es un numero entero positivo!");
+				// consumimos el ingreso erroneo
+				teclado.next();
+			}
+			positivo = teclado.nextInt();
+		} while (positivo <= 0);
+		System.out.println("  >> positivo = " + positivo);
+
+		// eliminando el terminador de linea "abandonado"
+		teclado.nextLine();
+
+		// validando el ingreso de vocales mayusculas
+		String vocal;
+		System.out.println("\nIngrese una vocal mayuscula: ");
+		while (!teclado.hasNext("[AEIOU]")) {
+			System.out.println("Esa no es una vocal mayuscula!");
+			// consumimos el ingreso erroneo
+			teclado.next();
+		}
+		vocal = teclado.next();
+		System.out.println("  >> vocal = " + vocal);
+		
+		// cerrando el scanner
+		teclado.close();
+	}
+
+}
+
+//Fin Caso 10

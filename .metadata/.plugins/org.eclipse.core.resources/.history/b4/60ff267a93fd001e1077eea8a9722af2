@@ -1,0 +1,29 @@
+package el_bosque_verde;
+
+public class ReservaNatural {
+	
+	private Especie[] especies;
+	private Cuidador[] cuidadorxs;
+	private Habitat[] habitats;
+	
+	ReservaNatural(){
+		
+	}
+	
+	void agregarEspecie(Especie esp) {
+		
+	}
+	
+	String buscarEspecie(String nombre) {
+		return nombre;
+	}
+	
+	double calcularPromedio() {
+		
+	}
+	
+	double calcularSueldoTotal(){
+		
+	}
+	
+}
