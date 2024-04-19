@@ -14,14 +14,13 @@ public class ReservaNatural {
 	
 	
 	void agregarEspecie(Especie esp) {
-//		for(int i = 0; i < this.especies.size(); i++ ) {
-//			if(this.especies.get(i).getNombre() == esp.getNombre()) {
-//				System.out.println("La especie ya se encuentra registrada.");
-//			} else {
-//				this.especies.add(esp);
-//			}
-//		}
-		this.especies.add(esp);
+		for(int i = 0; i < this.especies.size(); i++ ) {
+			if(this.especies.get(i).getNombre() == esp.getNombre()) {
+				System.out.println("La especie ya se encuentra registrada.");
+			} else {
+				this.especies.add(esp);
+			}
+		}
 	}
 	
 	//preguntar por esta func
@@ -50,9 +49,10 @@ public class ReservaNatural {
 	
 //	Calcula el promedio de individuos por especie en la reserva
 	void calcularPromedio() {
-		double total = sumatoriaTotal();
+		double total = 0;
 		double promedio = 0;
 		for(int i=0;i < this.especies.size();i++) {
+			total += this.especies.get(i).getCantidad();
 			promedio = this.especies.get(i).getCantidad() / total;
 			System.out.println("El promedio de la especie " + this.especies.get(i).getNombre() + " es del: %" + promedio*100 );
 		}
@@ -68,12 +68,11 @@ public class ReservaNatural {
 		ReservaNatural reserva1 = new ReservaNatural();
 		reserva1.agregarEspecie(especie1);
 		System.out.println(reserva1.buscarEspecie("gato"));
-		Especie especie2 = new Especie("perro","animal",3);
-		reserva1.agregarEspecie(especie2);
-		Especie especie3 = new Especie("conejo","animal",5);
-		reserva1.agregarEspecie(especie3);
-		System.out.println("la sumatoria total de individuos es: " + reserva1.sumatoriaTotal());
-		reserva1.calcularPromedio();
+//		Especie especie2 = new Especie("perro","animal",3);
+//		reserva1.agregarEspecie(especie2);
+//		Especie especie3 = new Especie("conejo","animal",5);
+//		reserva1.agregarEspecie(especie3);
+//		reserva1.calcularPromedio();
 		
 		
 	}
