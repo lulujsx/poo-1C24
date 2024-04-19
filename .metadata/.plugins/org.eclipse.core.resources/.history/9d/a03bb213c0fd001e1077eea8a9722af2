@@ -65,15 +65,20 @@ public class ReservaNatural {
 	
 	public static void main(String[] args) {
 		Especie especie1 = new Especie("gato","animal",5);
+		Habitat habitatMichi = new Habitat("moron",3.14,especie1);
 		ReservaNatural reserva1 = new ReservaNatural();
 		reserva1.agregarEspecie(especie1);
 		Integer resultado = reserva1.buscarEspecie("gato");
-		System.out.println(reserva1.buscarEspecie("gato"));
-//		Especie especie2 = new Especie("perro","animal",3);
-//		reserva1.agregarEspecie(especie2);
-//		Especie especie3 = new Especie("conejo","animal",5);
-//		reserva1.agregarEspecie(especie3);
-//		reserva1.calcularPromedio();
+		System.out.println(resultado);
+//		Cuidador cuidador1 = new Cuidador("Luisito",1);
+//		cuidador1.setSueldo(200.0);
+//		Cuidador cuidador2 = new Cuidador("Comunica",2);
+//		cuidador2.setSueldo(250.0);
+		Especie especie2 = new Especie("perro","animal",3);
+		reserva1.agregarEspecie(especie2);
+		Especie especie3 = new Especie("conejo","animal",5);
+		reserva1.agregarEspecie(especie3);
+		reserva1.calcularPromedio();
 		
 		
 	}

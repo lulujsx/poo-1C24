@@ -39,24 +39,15 @@ public class ReservaNatural {
 		return contador;
 	}
 	
-	double sumatoriaTotal() {
+//	Calcula el promedio de individuos por especie en la reserva
+	
+	double calcularPromedio() {
+		
 		double total = 0;
 		for(int i=0;i < this.especies.size();i++) {
 			total += this.especies.get(i).getCantidad();
 			}
-		return total;
-	}
-	
-//	Calcula el promedio de individuos por especie en la reserva
-	void calcularPromedio() {
-		double total = 0;
-		double promedio = 0;
-		for(int i=0;i < this.especies.size();i++) {
-			total += this.especies.get(i).getCantidad();
-			promedio = this.especies.get(i).getCantidad() / total;
-			System.out.println("El promedio de la especie " + this.especies.get(i).getNombre() + " es del: %" + promedio*100 );
 		}
-	}
 		
 //	
 //	double calcularSueldoTotal(){
@@ -64,18 +55,16 @@ public class ReservaNatural {
 //	}
 	
 	public static void main(String[] args) {
-		Especie especie1 = new Especie("gato","animal",5);
+		Especie especie1 = new Especie("gato","animal",1);
+		Habitat habitatMichi = new Habitat("moron",3.14,especie1);
 		ReservaNatural reserva1 = new ReservaNatural();
 		reserva1.agregarEspecie(especie1);
 		Integer resultado = reserva1.buscarEspecie("gato");
-		System.out.println(reserva1.buscarEspecie("gato"));
-//		Especie especie2 = new Especie("perro","animal",3);
-//		reserva1.agregarEspecie(especie2);
-//		Especie especie3 = new Especie("conejo","animal",5);
-//		reserva1.agregarEspecie(especie3);
-//		reserva1.calcularPromedio();
-		
-		
+		System.out.println(resultado);
+		Cuidador cuidador1 = new Cuidador("Luisito",1);
+		cuidador1.setSueldo(200.0);
+		Cuidador cuidador2 = new Cuidador("Comunica",2);
+		cuidador2.setSueldo(250.0);
 	}
 	
 }

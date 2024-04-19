@@ -68,7 +68,7 @@ public class ReservaNatural {
 		ReservaNatural reserva1 = new ReservaNatural();
 		reserva1.agregarEspecie(especie1);
 		Integer resultado = reserva1.buscarEspecie("gato");
-		System.out.println(reserva1.buscarEspecie("gato"));
+		System.out.println(reserva1.buscarEspecie("nombre"));
 //		Especie especie2 = new Especie("perro","animal",3);
 //		reserva1.agregarEspecie(especie2);
 //		Especie especie3 = new Especie("conejo","animal",5);
