@@ -83,7 +83,7 @@ public class ReservaNatural {
 	
 	@Override
 	public String toString() {
-		return "ReservaNatural [Especies=" + especies + "]";
+		return "ReservaNatural [especies=" + especies + "]";
 	}
 
 	public static void main(String[] args) {
@@ -99,7 +99,7 @@ public class ReservaNatural {
 		reserva1.calcularPromedio();
 		Especie especie4 = new Especie("conejo","animal",5);
 		reserva1.agregarEspecie(especie4);
-		System.out.println(reserva1.toString());
+		reserva1.toString();		
 		
 	}
 
