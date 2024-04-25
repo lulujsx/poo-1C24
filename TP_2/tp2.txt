@@ -1,0 +1,11 @@
+Trabajo Práctico  para POO1.
+
+Hacer un Programa en Java que cree un Objeto Computadora. Deberá armarlo con Una Consola que tiene pantalla de tipo string y 
+teclado de tipo string y con una unidad de Disco que tiene controlador de disco de tipo int y disco de tipo char.
+A medida que agrega un componente avisarlo por Pantalla y detener el programa para luego continuar.
+Una vez armado el Objeto, mostrar en Pantalla los componentes.
+
+Primero) una vez que entendieron el problema hacer el Diagrama de Clases usando StarUML.
+
+Segundo) Hacer el Programa usando Eclipse y Package.
+

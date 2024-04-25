@@ -1,0 +1,13 @@
+package computadora;
+
+public class Disco {
+	
+	private int controlador;
+	private char disco;
+	
+	public Disco(int ctrl, char disc) {
+		this.controlador = ctrl;
+		this.disco = disc;
+	}
+
+}

@@ -1,8 +1,0 @@
-package el_bosque_verde;
-
-public class Habitat {
-	
-	private String nombre;
-	private double area;
-	private Especie especie;
-}

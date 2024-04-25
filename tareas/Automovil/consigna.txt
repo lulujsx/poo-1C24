@@ -1,0 +1,6 @@
+Les envío el archivo ParteDEAutomovilJava que tiene un programa para que analicen y estudien 
+y puedan escribir un texto que diga lo que hace. 
+Y haciendo Ingeniería Inversa construyan el Diagrama de Clases correspondiente al programa.
+Háganlo funcionar en el Eclipse tal cual está y en los lugares que dice //getchar(), lo reemplacen por código en Java que detenga 
+el programa y envíe un mensaje en pantalla esperando que ingresen un entero por el teclado para poder seguir. Eso implementarlo con un Objeto de la Clase Scanner.
+Luego ese mismo programa impleméntenlo de modo que en el proyecto las clases estén en archivos separados y todos en el mismo paquete(package). Deberán agregar una clase que tenga al main.

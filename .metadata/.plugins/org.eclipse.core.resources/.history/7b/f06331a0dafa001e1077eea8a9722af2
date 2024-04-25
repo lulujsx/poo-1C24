@@ -1,9 +1,0 @@
-package el_bosque_verde;
-
-public class Cuidador {
-	private String nombre;
-	private int legajo;
-	private double sueldo;
-	private Especie especie;
-	
-}
