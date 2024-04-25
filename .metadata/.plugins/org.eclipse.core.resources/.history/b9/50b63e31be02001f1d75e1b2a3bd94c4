@@ -18,6 +18,7 @@ public class Computadora {
 	public void setConsola(Consola cons1) {
 		this.consola1 = cons1;
 		System.out.println("Se agrego una consola");
+	    pausarPrograma();
 	}
 	
 	public Consola getConsola() {
@@ -26,26 +27,25 @@ public class Computadora {
 	
 	public void setDisco(Disco disc1) {
 		this.disco1 = disc1;
+		System.out.println("Se agrego un disco");
+	    pausarPrograma();
 	}
 	
 	public Disco getDisco() {
 		return this.disco1;
 	}
-
+	
+	public void pausarPrograma() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Presiona Enter para continuar...");
+        scanner.nextLine();
+    }
 	
 
 	public static void main(String[] args) {
-		 Scanner scanner = new Scanner(System.in);
 		 Disco disco = new Disco(1, 'C');
-		 System.out.println("Se agrego un disco.");
-		 System.out.println("Presiona Enter para continuar...");
-		 scanner.nextLine();
 	     Consola consola = new Consola("LCD", "QWERTY");
-	     System.out.println("Se agrego una consola.");
-		 System.out.println("Presiona Enter para continuar...");
-		 scanner.nextLine();
 	     Computadora compu = new Computadora(disco,consola);
-	     System.out.println("La computadora creada tiene un disco: " + compu.getDisco()+ " y una consola: " + compu.getConsola());
 	     
 	     
 	}

@@ -45,7 +45,7 @@ public class Computadora {
 		 System.out.println("Presiona Enter para continuar...");
 		 scanner.nextLine();
 	     Computadora compu = new Computadora(disco,consola);
-	     System.out.println("La computadora creada tiene un disco: " + compu.getDisco()+ " y una consola: " + compu.getConsola());
+	     System.out.println("La computadora creado tiene un disco: " + compu.getDisco()+ " y una consola: " + compu.getConsola());
 	     
 	     
 	}
