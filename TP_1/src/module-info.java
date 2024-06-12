@@ -5,5 +5,5 @@
  * @author luana
  *
  */
-module TP_1 {
+module TP_2 {
 }

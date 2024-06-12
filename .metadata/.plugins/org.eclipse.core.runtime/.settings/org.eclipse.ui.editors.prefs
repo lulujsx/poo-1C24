@@ -45,5 +45,6 @@ searchResultIndication=true
 searchResultIndicationColor=245,40,135
 searchResultTextStyle=BOX
 secondaryIPColor=47,57,60
+spellingIndication=false
 spellingIndicationColor=253,170,211
 writeOccurrenceIndicationColor=65,65,4
