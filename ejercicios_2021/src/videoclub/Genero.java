@@ -5,7 +5,7 @@ public enum Genero {
 	Accion,
 	Suspenso,
 	Musical,
-	Terro,
+	Terror,
 	No_Definido,
 	Drama
 
