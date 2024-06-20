@@ -18,6 +18,8 @@ public class Serie extends Audiovisual {
 		if(otraSerie instanceof Serie) {
 			aux = (Serie) otraSerie;
 			return Integer.compare(this.temporadas, aux.temporadas);
+		} else {
+			throw new Error("Error");
 		}
 	}
 
