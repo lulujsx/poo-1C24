@@ -15,6 +15,7 @@ public class usoStack {
 //		pila.pop();
 		System.out.println(pila.peek());
 		System.out.println("---------------");
+		//recorrer pila
 		Stack<String> pilaux = new Stack<String>();
 		while(!pila.isEmpty()) {
 			String dato = pila.pop();
