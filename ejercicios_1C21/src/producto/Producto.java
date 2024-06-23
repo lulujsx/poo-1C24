@@ -58,7 +58,7 @@ public class Producto implements Comparable<Producto>{
 	@Override
 	public String toString() {
 		return "Producto [Codigo: " + this.codigo + " Descripcion: " + this.descripcion +
-				" Importe: " + "Stock disponible: " + this.stock + "]";
+				" Importe: "+ this.importe + " Stock disponible: " + this.stock + "]";
 	}
 	
 	//Metodo sin implementar Comparable
