@@ -1,7 +1,7 @@
 package colecciones;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class usoQueue {
+public class usoQueue { 
 	public static void main(String[] args) {
 		ConcurrentLinkedQueue<String> cola = new ConcurrentLinkedQueue<String>();
 		cola.offer("Gracias");
