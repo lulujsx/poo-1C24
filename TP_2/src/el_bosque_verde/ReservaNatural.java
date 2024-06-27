@@ -90,18 +90,18 @@ public class ReservaNatural {
 		Especie especie1 = new Especie("gato","animal",5);
 		ReservaNatural reserva1 = new ReservaNatural();
 		reserva1.agregarEspecie(especie1);
-		System.out.println(reserva1.buscarEspecie("gato"));
+//		System.out.println(reserva1.buscarEspecie("gato"));
 		Especie especie2 = new Especie("perro","animal",3);
 		reserva1.agregarEspecie(especie2);
 		Especie especie3 = new Especie("conejo","animal",5);
 		reserva1.agregarEspecie(especie3);
-		System.out.println("La sumatoria total de individuos de todas las especies es: " + reserva1.sumatoriaTotalEspecies());
+//		System.out.println("La sumatoria total de individuos de todas las especies es: " + reserva1.sumatoriaTotalEspecies());
 		reserva1.calcularPromedio();
 		Especie especie4 = new Especie("conejo","animal",5);
 		reserva1.agregarEspecie(especie4);
-		System.out.println(reserva1.toString());
 //		especie1.setCantidad(5);
 //		System.out.println(especie1.getCantidad());
+		System.out.println(reserva1);
 		
 	}
 

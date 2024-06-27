@@ -51,4 +51,10 @@ public class Especie {
 	Habitat getHabitat() {
 		return this.habitat;
 	}
+	
+	@Override
+	public String toString() {
+		return "[" + this.getNombre() + " tipo: " + this.getTipo() 
+		+ " cantidad: " + this.getCantidad() + " habitat: " + this.getHabitat() + "]";
+	}
 }

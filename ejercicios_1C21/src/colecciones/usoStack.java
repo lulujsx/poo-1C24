@@ -2,7 +2,7 @@ package colecciones;
 import java.util.Stack;
 
 
-public class usoStack {
+public class usoStack { 
 
 	public static void main(String[] args) {
 		Stack<String> pila = new Stack<String>();
